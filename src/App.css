@@ -6,6 +6,10 @@
   height: 40vmin;
   pointer-events: none;
 }
+.head{
+  text-align: center;
+  color: #ffa500;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

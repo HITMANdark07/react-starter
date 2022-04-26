@@ -1,11 +1,10 @@
-const Card = ({name, url}) => {
+import styles from './Card.module.css';
+
+const Card = () => {
     return(
-        <div style={{
-            border:'2px solid green',
-            borderRadius:5
-        }}>
-          <h1>{name}</h1>
-          <p>{url}</p>
+        <div className={styles.main}>
+          <h1>NAME</h1>
+          <p>http://somewhreee.com</p>
         </div>
     )
 }
