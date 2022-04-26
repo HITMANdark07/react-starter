@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Home.module.css';
-
+import Card from './components/Card';
 const App = (props) => {
     
     const [data, setData] = useState(1);
@@ -9,9 +9,30 @@ const App = (props) => {
         setData(data+1);
     }
 
+    const appData = [
+        {
+            name:"Duck",
+            url:'http://duck.com'
+        },
+        {
+            name:"Google",
+            url:'http://google.com'
+        },
+        {
+            name:'Yahoo',
+            url:'http://yahoo.com'
+        }
+    ]
+
     return(
         <div style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
             <h1 style={{textAlign:'center'}}>{data} {props.name}</h1>
+            {
+                appData.map((dummyData) => (
+                    <Card data={dummyData} />
+                ))
+            }
+
             <button className={styles.btn} onClick={increment}>COUNTER</button>
         </div>
     )

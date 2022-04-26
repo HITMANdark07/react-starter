@@ -1,10 +1,10 @@
 import styles from './Card.module.css';
 
-const Card = () => {
+const Card = ({data:{name, url}}) => {
     return(
         <div className={styles.main}>
-          <h1>NAME</h1>
-          <p>http://somewhreee.com</p>
+          <h1>{name}</h1>
+          <p>{url}</p>
         </div>
     )
 }
